@@ -1,7 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/License-MIT-blue)
 
 # GPA-Forecaster
-This application parses .txt files containing school semester and class information and calculates and prints a grade point average (GPA) report for each file to the console.
+This application parses input .txt files containing school semester and class information (each file represents a school "career" with semesters and classes) and calculates and prints a grade point average (GPA) report for each file to the console.
 
 ### Sample Input File “SampleMultipleSemesters.txt”:
 ```
@@ -79,7 +79,18 @@ I built this application to enable myself to forecast semesters and easily see w
 3. Run the project (the main method is located in src/app/GPAForecaster.java).
 
 ## How to Use
-The input for the application is a .txt file. Multiple files can be run at once. Input files to be run regularly are located in src/inputfiles, and those run to test the application are located in src/testfiles.
+The input for the application is one or multiple .txt files. Input files to be run regularly are located in src/inputfiles, and those run to test the application are located in src/testfiles.
+
+### Using the Application:
+
+1. Install and run the application (see How to Install and Run above)
+2. Create a .txt file with semesters and classes formatted in the style outlined below.
+3. Place the file in src/inputfiles
+4. Add the file to the file names list in the main method, located in src/app/GPAForecaster.java (for example, fileNames.add("FILE_NAME.txt")).
+5. Repeat steps 2-4 as desired. A report will be generated for each file in the list.
+6. Run the application.
+
+### Formatting an Input File
 
 There are two acceptable line formats in an input file:
 
@@ -98,7 +109,7 @@ c className, classGrade
 Because commas are delimiters, they are not able to be used in class names (for example, Schools, Society, and Diversity).
 
 Every new class is added to the previously encountered semester until a new semester is encountered. </br>
-For example, for the below lines,
+For example, for the below input file,
 
 ```
 s Spring 2024
