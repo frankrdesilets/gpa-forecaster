@@ -85,7 +85,7 @@ The input for the application is one or multiple .txt files. Input files to be r
 
 ### Using the Application:
 
-1. Install and run the application (see How to Install and Run above)
+1. Install and run the application (see How to Install and Run above).
 2. Create a .txt file with semesters and classes formatted in the style outlined below.
 3. Place the file in src/inputfiles.
 4. Add the file to the file names list in the main method, located in src/app/GPAForecaster.java (for example, fileNames.add("FILE_NAME.txt")).
