@@ -1,0 +1,14 @@
+s Spring 2024
+c Algorithms,A+
+c Computer Systems,A
+c Linear Algebra,B+
+s Fall 2024
+c Programming Languages,A
+c Physics,C-
+c Chemistry,C
+c Calculus II,B
+s Spring 2025
+c Finance,B+
+c Calculus III,B-
+c Database Systems,A+
+c Theory of Computation,A+

@@ -1,0 +1,6 @@
+s Spring 2024
+c Algorithms,A+
+s Fall 2024
+c Computer Systems,B
+s Spring 2025
+c Linear Algebra,B+

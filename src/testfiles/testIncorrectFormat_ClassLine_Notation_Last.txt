@@ -1,0 +1,4 @@
+s Spring 2024
+c Algorithms,A
+c Programming Languages,A
+cLinear Algebra,A+

@@ -1,0 +1,4 @@
+s Spring 2024
+c Algorithms,B+
+c Computer Systems,A+
+c Linear Algebra,A-

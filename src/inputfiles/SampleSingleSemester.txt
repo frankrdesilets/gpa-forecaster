@@ -1,0 +1,5 @@
+s Spring 2024
+c Algorithms,A-
+c Advanced Entry Seminar,A+
+c Schools Society Diversity,B-
+c Linear Algebra,B+
