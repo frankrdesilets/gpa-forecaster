@@ -1,7 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/License-MIT-blue)
 
 # GPA-Forecaster
-This application parses input .txt files containing school semester and class information (each file represents a school "career" with semesters and classes) and calculates and prints a grade point average (GPA) report for each file to the console.
+An application that parses input .txt files containing school semester and class information (each file represents a school "career" with semesters completed and classes taken) and calculates and prints a grade point average (GPA) report for each file to the console.
 
 ### Sample Input File “SampleMultipleSemesters.txt”:
 ```
