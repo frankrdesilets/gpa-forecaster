@@ -84,7 +84,6 @@ I built this application to enable myself to forecast semesters and easily see w
 The input for the application is one or multiple .txt files. Input files to be run regularly are located in src/inputfiles, and those run to test the application are located in src/testfiles.
 
 ### Using the Application:
-
 1. Install and run the application (see How to Install and Run above).
 2. Create a .txt file with semesters and classes formatted in the style outlined below.
 3. Move the file to src/inputfiles.
@@ -93,14 +92,13 @@ The input for the application is one or multiple .txt files. Input files to be r
 6. Run the application.
 
 ### Formatting an Input File
-
 There are two acceptable line formats in an input file:
 
 ```
 s semesterName
 c className,classGrade
 ```
-where *s* denotes a new semester, and *c* denotes a new class. Class names and grades are separated by a comma delimiter. </br>
+where *s* denotes a new semester, and *c* denotes a new class. Class names and grades are separated by a comma delimiter, and as such are not able to be used in class names (for example, Schools, Society, and Diversity). </br>
 The set of acceptable classGrade values are: {A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F}
 
 Spaces are considered, and as such the below line is incorrectly formatted:
@@ -108,7 +106,6 @@ Spaces are considered, and as such the below line is incorrectly formatted:
 ```
 c className, classGrade
 ```
-Because commas are delimiters, they are not able to be used in class names (for example, Schools, Society, and Diversity).
 
 Every new class is added to the previously encountered semester until a new semester is encountered. </br>
 For example, for the below input file,
