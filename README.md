@@ -98,8 +98,7 @@ There are two acceptable line formats in an input file:
 s semesterName
 c className,classGrade
 ```
-where *s* denotes a new semester, and *c* denotes a new class. Class names and grades are separated by a comma delimiter, and as such are not able to be used in class names (for example, Schools, Society, and Diversity). </br>
-The set of acceptable classGrade values are: {A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F}
+where *s* denotes a new semester, and *c* denotes a new class. Class names and grades are separated by a comma delimiter, and as such are not able to be used in class names (for example, Schools, Society, and Diversity). The set of acceptable classGrade values are: {A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F}.
 
 Spaces are considered, and as such the below line is incorrectly formatted:
 
