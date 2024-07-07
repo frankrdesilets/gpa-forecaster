@@ -36,9 +36,6 @@ class TestFileFormatting {
 	 * 		testIncorrectFormat_SemesterLine_Notation_First_SingleFile
 	 * 		testIncorrectFormat_SemesterLine_Notation_Middle_SingleFile
 	 * 		testIncorrectFormat_SemesterLine_Notation_Last_SingleFile
-	 * 		testIncorrectFormat_SemesterLine_SemesterInfo_First_SingleFile
-	 * 		testIncorrectFormat_SemesterLine_SemesterInfo_Middle_SingleFile
-	 * 		testIncorrectFormat_SemesterLine_SemesterInfo_Last_SingleFile
 	 * 		testIncorrectFormat_RandomText_SingleFile
 	 */
 
