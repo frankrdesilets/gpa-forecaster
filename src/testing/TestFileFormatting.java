@@ -23,6 +23,7 @@ class TestFileFormatting {
 	 * 
 	 * INCORRECT FORMATTING
 	 * 
+	 * 
 	 * 		testIncorrectFormat_NoFiles
 	 * 		testIncorrectFormat_emptyFile_SingleFile
 	 * 		testIncorrectFormat_emptyFile_MultipleFiles

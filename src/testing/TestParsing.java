@@ -24,6 +24,7 @@ class TestParsing {
 	 * 
 	 * PARSING & CORRECT SEMESTER, CLASS, GPA INFORMATION
 	 * 
+	 * 
 	 * 		testParsing_SingleSemester_NoClasses_SingleFile
 	 * 		testParsing_SingleSemester_SingleClass_SingleFile
 	 * 		testParsing_SingleSemester_MultipleClass_SingleFile
