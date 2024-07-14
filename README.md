@@ -125,4 +125,4 @@ c Chemistry I,A
 there are two semesters, Spring 2024, with classes Computer Systems, Calculus II, Linear Algebra, and Fundamentals of Physics, and Fall 2024, with classes Programming Languages, Machine Learning, Theory of Computation, and Chemistry I.
 
 ## Testing
-The application was tested thoroughly with JUnit 5. Tests include ensuring correct calculations, accurate file parsing, correct semester, class, and GPA information, and incorrect file format detection. Test suites and .txt files used for testing are located in src/testing and src/testfiles, respectively.
+The application was tested thoroughly with JUnit 5. Tests include ensuring correct calculations, accurate file parsing, correct semester, class, and GPA information, and incorrect file format detection. Test suites and input .txt files used for testing are located in src/testing and src/testfiles, respectively.
