@@ -18,12 +18,11 @@ import junit.framework.Assert;
 class TestParsing {
 	
 	/* 
-	 * ---
+	 * *---*
 	 * TEST CASES
-	 * ---
+	 * *---*
 	 * 
 	 * PARSING & CORRECT SEMESTER, CLASS, GPA INFORMATION
-	 * 
 	 * 
 	 * 		testParsing_SingleSemester_NoClasses_SingleFile
 	 * 		testParsing_SingleSemester_SingleClass_SingleFile

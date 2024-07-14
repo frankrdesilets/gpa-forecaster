@@ -17,12 +17,11 @@ import junit.framework.Assert;
 class TestFileFormatting {
 	
 	/* 
-	 * ---
+	 * *---*
 	 * TEST CASES
-	 * ---
+	 * *---*
 	 * 
 	 * INCORRECT FORMATTING
-	 * 
 	 * 
 	 * 		testIncorrectFormat_NoFiles
 	 * 		testIncorrectFormat_emptyFile_SingleFile
