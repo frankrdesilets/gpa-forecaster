@@ -30,7 +30,8 @@ public class Calculator {
 	 * @return
 	 */
 	private double calculateGPA() {
-		double runningGPATotal = 0;
+		double runningPointTotal = 0;
+		int classCount = 0;
 		/*
 		 * Because a Semester object keeps track of its current GPA, the cumulative GPA
 		 * is calculated by adding the semester GPA of each Semester in the list and
@@ -38,10 +39,11 @@ public class Calculator {
 		 */
 		for (int i = 0; i < semesterList.size(); i++) {
 			Semester currentSemester = semesterList.get(i);
-			runningGPATotal += currentSemester.getSemesterGPA();
+			runningPointTotal += currentSemester.getSemesterPoints();
+			classCount += semesterList.get(i).getClassCount();
 		}
 
-		return runningGPATotal / semesterList.size();
+		return runningPointTotal / classCount;
 	}
 
 	public double getGPA() {

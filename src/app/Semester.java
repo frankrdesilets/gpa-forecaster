@@ -11,7 +11,7 @@ public class Semester {
 	private String semesterName; // the semester name
 	private ArrayList<Class> classList; // a list of all classes taken in a semester
 	private int classCount; // the number of classes taken in a semester
-	private double semesterGPA; // the semester GPA (updated in real time)
+	private double semesterPoints; // the semester GPA (updated in real time)
 
 	/*
 	 * These values represent the point value for each possible letter grade.
@@ -41,7 +41,7 @@ public class Semester {
 		this.semesterName = semesterName;
 		this.classList = new ArrayList<>();
 		this.classCount = 0;
-		this.semesterGPA = 0;
+		this.semesterPoints = 0;
 
 	}
 
@@ -66,15 +66,15 @@ public class Semester {
 	 */
 	private void updateSemesterGPA() {
 
-		double runningGPATotal = 0;
+		double runningPointTotal = 0;
 		/*
 		 * The semester GPA is calculated by adding the grade point values of each class
 		 * and dividing by the total number of classes.
 		 */
 		for (int i = 0; i < classList.size(); i++) {
-			runningGPATotal += letterGradeToPointValue(classList.get(i).getLetterGrade());
+			runningPointTotal += letterGradeToPointValue(classList.get(i).getLetterGrade());
 		}
-		this.semesterGPA = runningGPATotal / (double) this.classCount;
+		this.semesterPoints = runningPointTotal;
 
 	}
 
@@ -139,8 +139,8 @@ public class Semester {
 		return classCount;
 	}
 
-	public double getSemesterGPA() {
-		return semesterGPA;
+	public double getSemesterPoints() {
+		return semesterPoints;
 	}
 
 }

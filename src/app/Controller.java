@@ -22,7 +22,7 @@ public class Controller {
 	 * @param filesToRun
 	 * @param isTest
 	 */
-	public Controller(ArrayList<String> filesToRun, boolean isTest) {
+	public Controller(ArrayList<String> filesToRun, double targetGPA, boolean isTest) {
 
 		this.allFilesSemesterList = new ArrayList<>();
 
@@ -66,7 +66,7 @@ public class Controller {
 				 * A GPA report is printed to the console for the currently processed file in
 				 * the filesToRun via the Reporter object.
 				 */
-				reporter.report(semesterList, currentFile);
+				reporter.report(semesterList, currentFile, targetGPA);
 			}
 		}
 	}

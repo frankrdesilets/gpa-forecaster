@@ -52,7 +52,7 @@ class TestFileFormatting {
 
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>(); // empty file list
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0, true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * be empty if there are no files to process.
@@ -80,7 +80,7 @@ class TestFileFormatting {
 		 */
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_emptyFile.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * only contain one list, which should be empty; empty files are incorrectly
@@ -112,7 +112,7 @@ class TestFileFormatting {
 		fileNames.add("testIncorrectFormat_emptyFile.txt");
 		fileNames.add("testIncorrectFormat_emptyFile2.txt");
 		fileNames.add("testIncorrectFormat_emptyFile3.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * be empty if there are no files to process.
@@ -146,7 +146,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_Notation_First.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -181,7 +181,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_Notation_Middle.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -216,7 +216,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_Notation_Last.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -251,7 +251,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_ClassInfo_First.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -286,7 +286,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_ClassInfo_Middle.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -321,7 +321,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_ClassInfo_Last.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -354,7 +354,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_ClassLine_ClassGrade.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -389,7 +389,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_SemesterLine_Notation_First.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -424,7 +424,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_SemesterLine_Notation_Middle.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -459,7 +459,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_SemesterLine_Notation_Last.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -493,7 +493,7 @@ class TestFileFormatting {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testIncorrectFormat_RandomText.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames, 4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by

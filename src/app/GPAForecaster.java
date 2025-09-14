@@ -24,6 +24,9 @@ public class GPAForecaster {
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("SampleSingleSemester.txt");
 		fileNames.add("SampleMultipleSemesters.txt");
+		
+		// the target GPA to match scenarios against
+		final double TARGET_GPA = 3.4;
 
 		/*
 		 * A Controller object calculates and prints a report to the console for each
@@ -34,7 +37,7 @@ public class GPAForecaster {
 		 * file. If true, reports are not printed.
 		 * 
 		 */
-		Controller applicationController = new Controller(fileNames, false);
+		Controller applicationController = new Controller(fileNames, TARGET_GPA, false);
 
 	}
 

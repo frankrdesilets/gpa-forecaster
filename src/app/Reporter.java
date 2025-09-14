@@ -41,7 +41,7 @@ public class Reporter {
 	 * @param semesterList
 	 * @param fileName
 	 */
-	public void report(ArrayList<Semester> semesterList, String fileName) {
+	public void report(ArrayList<Semester> semesterList, String fileName, double targetGPA) {
 
 		/*
 		 * A Calculator object is created to calculate the cumulative GPA value for
@@ -75,7 +75,7 @@ public class Reporter {
 			// the number of classes and semester GPA are printed
 			System.out.println("Classes: " + currentSemester.getClassCount());
 			System.out.print("Semester GPA: ");
-			System.out.printf("%,.3f", currentSemester.getSemesterGPA());
+			System.out.printf("%,.3f", (currentSemester.getSemesterPoints() / currentSemester.getClassCount()));
 			System.out.println();
 			/*
 			 * The current semester's classes and their grades are printed.
@@ -88,10 +88,16 @@ public class Reporter {
 			System.out.println();
 		}
 		// The cumulative GPA for all semesters in the list is printed
+		double cumulativeGPA = calculator.getGPA();
 		System.out.println("***");
 		System.out.print("Cumulative GPA: ");
-		System.out.printf("%,.3f", calculator.getGPA());
+		System.out.printf("%,.3f", cumulativeGPA);
 		System.out.println();
+		if (cumulativeGPA >= targetGPA) {
+			System.out.println("This scenario ACHIEVES the target GPA of "+targetGPA+".");
+		} else {
+			System.out.println("This scenario DOES NOT achieve the target GPA of "+targetGPA+".");
+		}
 		System.out.println("***");
 		System.out.println("--- End of Report ---");
 		System.out.println();

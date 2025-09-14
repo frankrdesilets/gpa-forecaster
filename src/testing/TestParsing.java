@@ -48,7 +48,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_SingleSemester_NoClasses.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0, true);
 
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
@@ -69,7 +69,7 @@ class TestParsing {
 		int calculatedNumberOfSemesters = semesterList.size(); // calculated number of semesters
 		String calculatedSemesterName = semesterList.get(0).getSemesterName(); // calculated semester name
 		int calculatedNumberOfClasses = semesterList.get(0).getClassCount(); // calculated number of classes
-		double calculatedSemesterGPA = semesterList.get(0).getSemesterGPA(); // calculated semester GPA
+		double calculatedSemesterGPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA(); // calculated cumulative GPA
 
@@ -99,7 +99,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_SingleSemester_SingleClass.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
@@ -126,7 +126,7 @@ class TestParsing {
 		String calculatedClassGrade = semesterList.get(0).getClasses().get(0).getLetterGrade().toString(); // calculated
 																											// class
 																											// grade
-		double calculatedSemesterGPA = semesterList.get(0).getSemesterGPA(); // calculated semester GPA
+		double calculatedSemesterGPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA(); // calculated cumulative GPA
 
@@ -161,7 +161,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_SingleSemester_MultipleClass.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
@@ -204,7 +204,7 @@ class TestParsing {
 																											// third
 																											// class
 																											// grade
-		double calculatedSemesterGPA = semesterList.get(0).getSemesterGPA(); // calculated semester GPA
+		double calculatedSemesterGPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA();
 
@@ -250,7 +250,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_MultipleSemesters_NoClasses.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * contain one list from the only file, with three semesters, named
@@ -279,7 +279,7 @@ class TestParsing {
 		String calculatedSemester1Name = semesterList.get(0).getSemesterName(); // calculated first semester name
 		String calculatedSemester2Name = semesterList.get(1).getSemesterName(); // calculated second semester name
 		String calculatedSemester3Name = semesterList.get(2).getSemesterName(); // calculated third semester name
-		double calculatedSemesterGPA = semesterList.get(0).getSemesterGPA(); // calculated semester GPA
+		double calculatedSemesterGPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA();
 
@@ -319,7 +319,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_MultipleSemesters_SingleClass.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * contain one list from the only file, with three semesters, named
@@ -380,9 +380,9 @@ class TestParsing {
 																													// semester
 																													// class
 																													// name
-		double calculatedSemester1GPA = semesterList.get(0).getSemesterGPA(); // calculated first semester GPA
-		double calculatedSemester2GPA = semesterList.get(1).getSemesterGPA(); // calculated second semester GPA
-		double calculatedSemester3GPA = semesterList.get(2).getSemesterGPA(); // calculated third semester GPA
+		double calculatedSemester1GPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated first semester GPA
+		double calculatedSemester2GPA = semesterList.get(1).getSemesterPoints() / semesterList.get(1).getClassCount(); // calculated second semester GPA
+		double calculatedSemester3GPA = semesterList.get(2).getSemesterPoints() / semesterList.get(2).getClassCount(); // calculated third semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA();
 
@@ -443,7 +443,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_MultipleSemesters_MultipleClasses.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 		/*
 		 * The master list (indexed by semester lists from each file processed) should
 		 * contain one list from the only file, with three semesters, named
@@ -658,9 +658,9 @@ class TestParsing {
 		calculatedSemesterClassGrades.add(calculatedSemester3Class3Grade);
 		calculatedSemesterClassGrades.add(calculatedSemester3Class4Grade);
 
-		double calculatedSemester1GPA = semesterList.get(0).getSemesterGPA(); // calculated first semester GPA
-		double calculatedSemester2GPA = semesterList.get(1).getSemesterGPA(); // calculated second semester GPA
-		double calculatedSemester3GPA = semesterList.get(2).getSemesterGPA(); // calculated third semester GPA
+		double calculatedSemester1GPA = semesterList.get(0).getSemesterPoints() / semesterList.get(0).getClassCount(); // calculated first semester GPA
+		double calculatedSemester2GPA = semesterList.get(1).getSemesterPoints() / semesterList.get(1).getClassCount(); // calculated second semester GPA
+		double calculatedSemester3GPA = semesterList.get(2).getSemesterPoints() / semesterList.get(2).getClassCount(); // calculated third semester GPA
 		Calculator calculator = new Calculator(semesterList);
 		double calculatedCumulativeGPA = calculator.getGPA();
 
@@ -716,7 +716,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_ClassBeforeSemester.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
@@ -750,7 +750,7 @@ class TestParsing {
 		// A list of file names and a controller object are created
 		ArrayList<String> fileNames = new ArrayList<>();
 		fileNames.add("testParsing_ClassNoSemesters.txt");
-		Controller applicationController = new Controller(fileNames, true);
+		Controller applicationController = new Controller(fileNames,  4.0,  true);
 
 		/*
 		 * The master list of semester lists, maintained by the Controller (indexed by
