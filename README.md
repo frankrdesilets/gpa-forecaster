@@ -1,7 +1,9 @@
 ![Static Badge](https://img.shields.io/badge/License-MIT-blue)
 
 # gpa-forecaster
-This application parses one or multiple input .txt files representing an academic career (semesters taken or planned and their classes) and calculates and prints a grade point average (GPA) report for each file to the console, enabling a student to forecast semesters by planning their future classes and anticipated grades, and predict a final cumulative GPA.
+This application parses one or multiple input .txt files representing an academic career (semesters taken or planned and their classes) and calculates and prints a grade point average (GPA) report for each file to the console, enabling a student to plan semesters by comparing classes/grade scenarios against a target GPA.
+
+Note: This applications currently only supports Southwestern University grade-point values and 4 credit classes.
 
 ### Sample Input File “SampleMultipleSemesters.txt”:
 ```
@@ -51,7 +53,8 @@ Semester GPA: 3.500
 -> Theory of Computation | A+
 
 ***
-Cumulative GPA: 3.315
+Cumulative GPA: 3.273
+This scenario DOES NOT achieve the target GPA of 3.4.
 ***
 --- End of Report ---
 ```
@@ -71,7 +74,7 @@ I built this application to enable myself to forecast semesters and easily see w
 ## Features
 -	Parses school “career” (semester and class) information from .txt files
 -	Prints GPA report for files
-    - Reports include each semester, their classes and semester GPA, and a final cumulative GPA.
+    - Reports include each semester, their classes and semester GPA, and the final cumulative GPA matched against a target.
     -	Reports generated for an unlimited number of .txt files at once.
 -	Easily configure .txt file with semester and class information
 
@@ -89,7 +92,8 @@ The input for the application is one or multiple .txt files. Input files to be r
 3. Move the file to src/inputfiles.
 4. Add the file to the file names list in the main method, located in src/app/GPAForecaster.java (for example, fileNames.add("FILE_NAME.txt")).
 5. Repeat steps 2-4 as desired. A report will be generated for each file in the list.
-6. Run the application.
+6. Set the target GPA to match scenarios against in src/app/GPAForecaster.java.
+7. Run the application.
 
 ### Formatting an Input File
 There are two acceptable line formats in an input file:
