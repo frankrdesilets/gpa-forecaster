@@ -3,7 +3,7 @@
 # gpa-forecaster
 This application parses one or multiple input .txt files representing an academic career (semesters taken or planned and their classes) and calculates and prints a grade point average (GPA) report for each file to the console, enabling a student to plan semesters by comparing classes/grade scenarios against a target GPA.
 
-Note: This applications currently only supports Southwestern University grade-point values and 4 credit classes.
+Note: This application currently only supports Southwestern University grade-point values and 4 credit classes.
 
 ### Sample Input File “SampleMultipleSemesters.txt”:
 ```
@@ -65,8 +65,6 @@ This application enables a student to forecast semesters by planning their futur
 .txt files are used as input to represent a school “career”; files contain semesters taken or planned and their classes. Each semester in the file is calculated a semester GPA by taking the average of the grade point values of the classes in the semester, and a final cumulative is calculated by taking the average of the GPAs of every semester. Appropriately formatted .txt files (containing semester and class information) are added to src/inputfiles and to the list of files to process in src/app/GPAForecaster.java. When run, the program will print a report for each file, as shown above for a single file.
 
 The application was written in Java with Eclipse IDE 2023-12 4.30.0, and was tested thoroughly with JUnit 5. Tests include ensuring correct calculations, accurate file parsing, correct semester, class, and GPA information, and incorrect file format detection. Test suites and .txt files used for testing are located in src/testing and src/testfiles, respectively.
-
-The worst-case efficiency of the application is in O(*n*).
 
 ## Motivation
 I built this application to enable myself to forecast semesters and easily see what combinations of grades I would need to earn to achieve a specific final cumulative GPA.
